@@ -14,24 +14,50 @@ namespace Lambda_Expression__Joe_Checker
             List<Employee> listOfEmployees = new List<Employee>();
 
             listOfEmployees.Add(new Employee("Joe", "Blow", 1));
+            listOfEmployees.Add(new Employee("Joe", "Cool", 2));
             listOfEmployees.Add(new Employee("Joe", "Dirt", 3));
             listOfEmployees.Add(new Employee("Joe", "Schmoe", 4));
             listOfEmployees.Add(new Employee("Josephine", "Joe", 5));
+            listOfEmployees.Add(new Employee("Joe", "Black", 6));
             listOfEmployees.Add(new Employee("Party", "Hardy", 7));
             listOfEmployees.Add(new Employee("Johnny", "Appleseed", 8));
             listOfEmployees.Add(new Employee("Jesse", "Techguy", 9));
             listOfEmployees.Add(new Employee("Joe", "Lean", 10));
 
 
+
+
             List<Employee> listOfAverageJoes = new List<Employee>();
 
             for (var i = 0; i < listOfEmployees.Count; i++)
-
-                if (listOfEmployees[i].FirstName == "Joe") {
-                   listOfEmployees[i] = listOfAverageJoes
+            {
+                if (listOfEmployees[i].FirstName == "Joe")
+                {
+                    listOfAverageJoes.Add(listOfEmployees[i]);
+                   
                 }
+                Console.WriteLine(listOfEmployees[i]);
+                
+            }
+            Console.ReadLine();
+            //foreach (Employee[i] in listOfEmployees)
+            //{
+            //    Console.WriteLine(item);
+            //    PrintListDetails(listOfEmployees.item);
+            //}
+            //Console.WriteLine("\n" + listOfAverageJoes.Count);
+            //;
+            //Console.ReadLine();
+
+
+            //void PrintListDetails(List<Employee> item)
+            //{
+            //    foreach (var field in typeof(Employee).GetType().GetFields())
+            //    {
+            //        Console.WriteLine(field.ToString());
+            //        Console.WriteLine(field.Name + ": " + field.GetValue(listOfEmployees));
+            //    }
+            //}
         }
-
-
     }
-}  
+}

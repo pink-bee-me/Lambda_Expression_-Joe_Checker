@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lambda_Expression_ Joe_Checker", "Lambda_Expression_ Joe_Checker\Lambda_Expression_ Joe_Checker.csproj", "{1EF18B2E-2B90-416C-86F0-A931B2FBBD61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeList", "Lambda_Expression_ Joe_Checker\EmployeeList.csproj", "{1EF18B2E-2B90-416C-86F0-A931B2FBBD61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

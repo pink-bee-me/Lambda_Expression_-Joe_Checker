@@ -20,8 +20,10 @@ namespace Lambda_Expression__Joe_Checker
             this.Id = Id;
         }
 
+   
+       
 
-
+    
 
     }
     }
