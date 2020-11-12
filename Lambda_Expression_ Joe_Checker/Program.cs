@@ -17,7 +17,7 @@ namespace Lambda_Expression__Joe_Checker
             listOfEmployees.Add(new Employee("Joe", "Cool", 2));
             listOfEmployees.Add(new Employee("Joe", "Dirt", 3));
             listOfEmployees.Add(new Employee("Joe", "Schmoe", 4));
-            listOfEmployees.Add(new Employee("Josephine", "Joe", 5));
+            listOfEmployees.Add(new Employee("Angelina", "Jolie", 5));
             listOfEmployees.Add(new Employee("Joe", "Black", 6));
             listOfEmployees.Add(new Employee("Party", "Hardy", 7));
             listOfEmployees.Add(new Employee("Johnny", "Appleseed", 8));
@@ -28,18 +28,49 @@ namespace Lambda_Expression__Joe_Checker
 
 
             List<Employee> listOfAverageJoes = new List<Employee>();
-
+            Console.WriteLine("Employee List");
             for (var i = 0; i < listOfEmployees.Count; i++)
             {
+                Console.WriteLine("Employee Name: " + listOfEmployees[i].FirstName + " " + listOfEmployees[i].LastName +
+                   "   Id: " + listOfEmployees[i].Id + "\n");
+
                 if (listOfEmployees[i].FirstName == "Joe")
                 {
                     listOfAverageJoes.Add(listOfEmployees[i]);
-                   
+
                 }
-                Console.WriteLine(listOfEmployees[i]);
+
+
+            }
+
+            Console.ReadLine();
+
+
+            Console.WriteLine("Employee List of Average Joes");
+
+            for (var i = 0; i < listOfAverageJoes.Count; i++)
+            {
                 
+                Console.WriteLine("Employee Name: " + listOfAverageJoes[i].FirstName + " " + listOfAverageJoes[i].LastName +
+                      "   Id: " + listOfAverageJoes[i].Id + "\n");
             }
             Console.ReadLine();
+
+            List<Employee> listOfLambdaAverageJoes = new List<Employee>();
+            Console.WriteLine("List of Average Joes");
+            for (var j= 0; j < listOfEmployees.Count; j++)
+            {
+
+                foreach (Employee employee in listOfEmployees.FindAll(e => (e.FirstName == "Joe")).ToList<Employee>()) ;
+                {
+                    listOfLambdaAverageJoes.Add(listOfEmployees[j]);
+
+                    Console.WriteLine("Employee Name: " + listOfLambdaAverageJoes[j].FirstName + " " + listOfLambdaAverageJoes[j].LastName +
+                          "   Id: " + listOfLambdaAverageJoes[j].Id + "\n");
+                }
+                Console.ReadLine();
+            }
+        }
             //foreach (Employee[i] in listOfEmployees)
             //{
             //    Console.WriteLine(item);
@@ -50,14 +81,13 @@ namespace Lambda_Expression__Joe_Checker
             //Console.ReadLine();
 
 
-            //void PrintListDetails(List<Employee> item)
-            //{
-            //    foreach (var field in typeof(Employee).GetType().GetFields())
-            //    {
-            //        Console.WriteLine(field.ToString());
-            //        Console.WriteLine(field.Name + ": " + field.GetValue(listOfEmployees));
-            //    }
-            //}
+                //void PrintListDetails(List<Employee> item)
+                //{
+                //    foreach (var field in typeof(Employee).GetType().GetFields())
+                //    {
+                //        Console.WriteLine(field.ToString());
+                //        Console.WriteLine(field.Name + ": " + field.GetValue(listOfEmployees));
+                //    }
+                //}
         }
     }
-}
